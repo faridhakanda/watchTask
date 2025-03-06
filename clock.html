@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="currentTime.js"></script>
+    <script src="countDown.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+        #container {
+            display: flex;
+            flex-grow: 50%;
+            width: 600px;
+            height: 500px;
+            margin: auto;
+            align-content: center;
+            justify-content: center;
+            background-image: url("countdownbg.png");
+        }
+        #clockImage {
+            width: 250px;
+            height: 200px;
+            margin-top: 220px;
+            margin-left: 50px;
+        }
+        #clockImage img {
+            position: absolute;
+        }
+        #team {
+            margin-top: 150px;
+            margin-right: 40px;
+            width: 250px;
+            height: 300px;
+            color: white;
+            text-align: center;
+
+        }
+        #teamBangladesh  {
+            margin-top: 5px;
+        }
+        #teamAfghanistan {
+            padding: 15px;
+        }
+        #countTimer {
+            width: 250px;
+            height: 100px;
+            display: flex;
+            gap: 35px;
+            text-align: center;
+            align-content: center;
+            margin: auto;
+            margin-top: 30px;
+            padding-left: 8px;
+            justify-content: center;
+            align-items:center;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="clockImage">
+            <img class="rotateHour" src="hour.png" alt="Hour">
+            <img class="rotateMinute" src="min.png" alt="Minute">
+            <img class="rotateSecond" src="sec.png" alt="Second">
+        </div>
+        <div id="team">
+            <div id="teamName">
+                <h1 id="teamBangladesh">Bangladesh</h1>
+                <h1 id="teamAfghanistan">Afghanistan</h1>
+            </div>
+            <div id="countTimer">
+                <h1 id="hourCount">0</h1>
+                <h1 id="minCount">0</h1>
+                <h1 id="secCount">0</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
