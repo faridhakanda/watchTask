@@ -9,74 +9,96 @@
     <style>
         body {
             margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
         }
         #container {
             display: flex;
-            flex-grow: 50%;
-            width: 600px;
-            height: 500px;
-            margin: auto;
-            align-content: center;
-            justify-content: center;
             background-image: url("countdownbg.png");
-        }
-        #clockImage {
-            width: 250px;
-            height: 200px;
-            margin-top: 220px;
-            margin-left: 50px;
-        }
-        #clockImage img {
-            position: absolute;
-        }
-        #team {
-            margin-top: 150px;
-            margin-right: 40px;
-            width: 250px;
-            height: 300px;
-            color: white;
-            text-align: center;
+            width: 300px;
+            height: 250px;
+            background-size: cover;
+            margin: auto;
 
         }
-        #teamBangladesh  {
-            margin-top: 5px;
-        }
-        #teamAfghanistan {
-            padding: 15px;
-        }
-        #countTimer {
-            width: 250px;
-            height: 100px;
+        #watchAndTeam {
             display: flex;
-            gap: 35px;
-            text-align: center;
+            flex-direction: row;
+            margin-top: 50px;
+            justify-items: space-between;
+            align-items: center;
             align-content: center;
+        }
+        #watch {
+            display: flex;
+            width: 135px;
+            height: 100px;
             margin: auto;
-            margin-top: 30px;
-            padding-left: 8px;
+            align-items: center;
+            align-content: center;
             justify-content: center;
-            align-items:center;
+        }
+        #watch img {
+            position: absolute;
+            width: 80px;
+            margin: auto;
             
         }
+        #team {
+            margin: auto;
+            align-items: center;
+            align-content: center;
+            justify-items: center;
+            text-align: center;
+            width: 140px;
+            height: 160px;
+            color: white;
+            margin-left: 15px;
+            margin-top: 7px;
+            font-size: 15px;
+        }
+        #teamName {
+            font-weight: bold;
+        }
         
+        #countDown {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            justify-content: space-evenly;
+            gap: 20px;
+            padding: 0px;
+            font-size: 15px;
+        }
+        #countDown h4 {
+            display: flex;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding-bottom: 5px;
+            
+        }
     </style>
 </head>
 <body>
     <div id="container">
-        <div id="clockImage">
-            <img class="rotateHour" src="hour.png" alt="Hour">
-            <img class="rotateMinute" src="min.png" alt="Minute">
-            <img class="rotateSecond" src="sec.png" alt="Second">
-        </div>
-        <div id="team">
-            <div id="teamName">
-                <h1 id="teamBangladesh">Bangladesh</h1>
-                <h1 id="teamAfghanistan">Afghanistan</h1>
+        <div id="watchAndTeam">
+            <div id="watch">
+                <img class="rotateHour" src="hour.png" alt="hour">
+                <img class="rotateMinute" src="min.png" alt="min">
+                <img class="rotateSecond" src="sec.png" alt="sec">
             </div>
-            <div id="countTimer">
-                <h1 id="hourCount">0</h1>
-                <h1 id="minCount">0</h1>
-                <h1 id="secCount">0</h1>
+            <div id="team">
+                <div id="teamName">
+                    <h3>Bangladesh</h3>
+                    <h3>Afghanistan</h3>
+                </div>
+                <div id="countDown">
+                    <h4 id="hourCount">00</h4>
+                    <h4 id="minCount">00</h4>
+                    <h4 id="secCount">00</h4>
+                </div>
             </div>
         </div>
     </div>
